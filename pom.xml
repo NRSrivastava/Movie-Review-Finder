@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>srivastava.neelesh</groupId>
+    <artifactId>imdbMovieRatingResolver</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20201115</version>
+        </dependency>
+    </dependencies>
+    <build>
+      <plugins>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+                <archive>
+                  <manifest>
+                    <addClasspath>true</addClasspath>
+                    <classpathPrefix>lib/</classpathPrefix>
+                    <mainClass>srivastava.neelesh.imdbMovieRatingResolver.resolve</mainClass>
+                  </manifest>
+                </archive>
+        </configuration>
+          </execution>
+        </executions>
+        </plugin>
+      </plugins>
+    </build>
+    <name>Movie Rating Finder</name>
+    <description>This teminal application will help you find ratings of mostly every movie and series on the internet.
+The ratings come from many different providers like:
+IMDb, TMdb, Meta Critic, Rotten Tomatoes, TV.com, Film Affinity.
+
+It shows results for all the different movies and series relating to the keywords you have entered.
+
+For it to work:
+
+You need to have java installed on your computer.
+You need a running internet connection.
+
+
+Steps to be followed:
+
+Download the jar file provided.
+Open command prompt/power shell/terminal where you have the downloaded file.
+Type the command "java -jar &lt;full file name with extension&gt;" and hit Enter.
+Follow the on-screen instructions and enjoy. :)
+</description>
+</project>
