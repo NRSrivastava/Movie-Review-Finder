@@ -66,7 +66,7 @@ public class resolve {
         
         String movieID=arr.getJSONObject(index).getString("id");
         
-        System.out.println("It make take a moment to load due to bandwidth limitation on IMDb-API's end . . .");
+        System.out.println("It may take a moment to load due to bandwidth limitation on IMDb-API's end . . .\n\nRatings:");
         
         url = "https://imdb-api.com/en/API/Ratings/k_loj126o8/"+movieID; //It has my api-key, please generate your own api key on https://imdb-api.com for your projects.
         obj = new URL(url);
