@@ -14,5 +14,5 @@ Steps to be followed:
 
 Download the jar file provided.
 Open command prompt/power shell/terminal where you have the downloaded file.
-Type the command "java -jar <full file name with extension>" and hit Enter.
+Type the command "java -jar <-full jar file name with extension->" and hit Enter.
 Follow the on-screen instructions and enjoy.🙂🙂
